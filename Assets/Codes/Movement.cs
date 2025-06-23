@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal") * rotationSpeed;
         float verticalInput = Input.GetAxis("Vertical") * speed;
-        transform.Rotate(0, 0, horizontalInput * Time.deltaTime);
+        transform.Rotate(0, 0, -horizontalInput * Time.deltaTime);
         transform.Translate(0, verticalInput * Time.deltaTime, 0);
     }
 }
